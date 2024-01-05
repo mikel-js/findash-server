@@ -6,7 +6,9 @@ import dotenv from 'dotenv';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import kpiRoutes from './routes/kpi.js';
+import productRoutes from './routes/product.js';
 import KPI from './models/KPI.js';
+import PRODUCT from './models/Product.js';
 import { kpis } from './data/data.js';
 
 dotenv.config();
@@ -24,6 +26,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 app.use('/kpi', kpiRoutes);
+app.use('/product', productRoutes);
 
 const PORT = process.env.PORT || 9000;
 mongoose
