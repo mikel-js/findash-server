@@ -38,6 +38,6 @@ mongoose
     app.listen(PORT, () => console.log(`Server running at port: ${PORT}`));
     // await mongoose.connection.db.dropDatabase();
     // KPI.insertMany(kpis);
-    Product.insertMany(products);
+    // Product.insertMany(products);
   })
   .catch((e) => console.log(`${e} did not connect`));
