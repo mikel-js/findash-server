@@ -8,7 +8,7 @@ router.get('/Transactions', async (req, res) => {
     const transactions = await Transaction.find().limit(50).sort({
       createdOn: -1,
     });
-    res.status(200).json(products);
+    res.status(200).json(transactions);
   } catch (e) {
     res.status(404).json({ message: error.message });
   }
